@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@drawable/baseline_search_white_24dp"
+        android:orderInCategory="60"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/other" android:title="@string/app_name"
+        app:showAsAction="never"
+        >
+        <group >
+            <item android:id="@+id/new_game"
+                android:icon="@drawable/ic_launcher_foreground"
+                android:title="Settings"/>
+            <item android:id="@+id/help"
+                android:icon="@drawable/ic_launcher_foreground"
+                android:title="Help" />
+        </group>
+
+        <item android:title="Info">
+            <menu>
+                <item android:id="@+id/new_game22"
+
+                    android:title="About App"/>
+                <item android:id="@+id/help22"
+
+                    android:title="Contact Us" />
+
+            </menu>
+        </item>
+    </item>
+
+
+</menu>

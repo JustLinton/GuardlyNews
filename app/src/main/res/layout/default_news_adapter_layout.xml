@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:id="@+id/titleKit"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LoadingTitasle"
+            android:paddingEnd="90dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toEndOf="@id/perNewsImg"
+            android:textSize="18sp"
+            android:id="@+id/perNewsMainTitle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LoadingTag"
+            android:layout_below="@id/perNewsMainTitle"
+            android:layout_toEndOf="@id/perNewsImg"
+            android:textSize="10sp"
+            android:layout_marginTop="5dp"
+            android:paddingStart="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingEnd="12dp"
+            android:textColor="#FFFFFF"
+            android:background="#FFD600"
+            android:id="@+id/perNewsTag"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LoadingDate"
+            android:textSize="12sp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/perNewsDate"/>
+
+
+        <com.berrysdu.guardly.CircleImageView
+            android:id="@+id/perNewsImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_eject_black_24dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/nextPgKit"
+        android:visibility="visible"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:visibility="visible"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap For More...."
+                android:layout_toEndOf="@id/pageMid32422"
+                android:textColor="#9E9E9E"
+                android:layout_centerVertical="true"
+                android:id="@+id/pageIndiNext"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:background="#BDBDBD"
+                android:textColor="#BDBDBD"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:layout_centerVertical="true"
+                android:id="@+id/pageMid32422"
+                android:layout_toEndOf="@id/pageNum"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Page 1"
+                android:textColor="#9E9E9E"
+                android:layout_centerVertical="true"
+                android:id="@+id/pageNum"
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

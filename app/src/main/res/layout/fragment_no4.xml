@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".No4Fragment">
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:indeterminate="false"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/progress_h"
+        />
+    <RelativeLayout
+        android:id="@+id/loadingPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:indeterminate="false"
+            style="?android:attr/progressBarStyle"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress_circular"
+            />
+        <TextView
+            android:layout_below="@id/progress_circular"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFAB00"
+            android:text="Loading..."/>
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/MainFragListView"
+        android:layout_below="@id/progress_h"/>
+
+</RelativeLayout>

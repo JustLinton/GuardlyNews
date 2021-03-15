@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:subtitleTextColor="@android:color/white"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/mainToolBarTitle"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextColor="@android:color/white">
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:id="@+id/main_side_drawer"
+        tools:openDrawer="start"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/MainRelativeLayout"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#FFEA00"
+                android:id="@+id/decBarTopMain"
+                >
+            </View>
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_below="@id/decBarTopMain"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/mainTabLayout"
+                app:tabIndicatorColor="#FFEA00"
+                app:tabTextColor="#757575"
+                app:tabIndicatorHeight="3dp"
+                />
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/MainPgViwer"
+                android:layout_below="@+id/mainTabLayout"
+                />
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:background="#E0F8FE"
+            android:id="@+id/main_side_drawer_naviView"
+            android:layout_width="230dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/main_side_menu"
+            app:headerLayout="@layout/main_side_header_layout"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="@string/app_name"
+                    />
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+</RelativeLayout>

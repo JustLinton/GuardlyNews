@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReadingActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:subtitleTextColor="@android:color/white"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/mainToolBarTitle"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextColor="@android:color/white">
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_h"
+        android:layout_below="@id/toolbar"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#FFFFFF"/>
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:indeterminate="true"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-12dp"
+            />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollViewArt"
+        android:layout_below="@id/toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/headerSet"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:text="loading.."
+                    android:id="@+id/artTitle"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#757575"
+                    android:id="@+id/line1"
+                    android:layout_below="@id/artTitle"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/line1"
+                    android:textSize="16sp"
+                    android:layout_alignParentStart="true"
+                    android:background="#FFD600"
+                    android:text="loading.."
+                    android:id="@+id/artTag"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/line1"
+                    android:textSize="16sp"
+                    android:layout_alignParentEnd="true"
+                    android:text="loading.."
+                    android:id="@+id/artDate"
+                    />
+            </RelativeLayout>
+
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_height="200dp"
+                android:id="@+id/articleImg"
+                android:scaleType="centerCrop"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/headerSet"
+                android:layout_marginTop="30dp"
+                />
+
+            <TextView
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="loading.."
+                android:textSize="16sp"
+                android:layout_below="@id/articleImg"
+                android:id="@+id/articlePara1"
+                />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

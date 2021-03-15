@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <item android:id="@+id/firstMenu" android:title="Basics"
+        app:showAsAction="never"
+        >
+    <menu>
+        <item android:id="@+id/side_main_menu"
+            android:title="Main"
+            app:showAsAction="never"/>
+        <item android:id="@+id/side_search"
+            android:title="Search"
+            app:showAsAction="never"/>
+
+    </menu>
+
+    </item>
+    <item android:id="@+id/other" android:title="@string/app_name"
+        app:showAsAction="never"
+        >
+
+        <item android:title="SpotLights">
+            <menu>
+                <item android:id="@+id/T1_I1"
+                    android:title="Trump"/>
+                <item android:id="@+id/T1_I2"
+                    android:title="Covid-19" />
+
+            </menu>
+        </item>
+
+        <item android:title="About BerrySDU">
+            <menu>
+                <item android:id="@+id/T2_I1"
+                    android:title="About Us"/>
+                <item android:id="@+id/T2_I2"
+                    android:title="WebSite" />
+
+            </menu>
+        </item>
+
+
+    </item>
+
+
+</menu>
